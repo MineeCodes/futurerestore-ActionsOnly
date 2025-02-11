@@ -2,9 +2,9 @@
 
 set -e
 export TMPDIR=/tmp
-export WORKFLOW_ROOT=${TMPDIR}/Builder/repos/futurerestore/.github/workflows
-export DEP_ROOT=${TMPDIR}/Builder/repos/futurerestore/dep_root
-export BASE=${TMPDIR}/Builder/repos/futurerestore/
+export WORKFLOW_ROOT=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/.github/workflows
+export DEP_ROOT=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/dep_root
+export BASE=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/
 
 #sed -i 's/deb\.debian\.org/ftp.de.debian.org/g' /etc/apt/sources.list
 apt-get -qq update
