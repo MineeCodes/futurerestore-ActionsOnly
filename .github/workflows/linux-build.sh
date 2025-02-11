@@ -2,9 +2,9 @@
 
 set -e
 export TMPDIR=/tmp
-export WORKFLOW_ROOT=${TMPDIR}/Builder/repos/futurerestore/.github/workflows
-export DEP_ROOT=${TMPDIR}/Builder/repos/futurerestore/dep_root
-export BASE=${TMPDIR}/Builder/repos/futurerestore/
+export WORKFLOW_ROOT=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/.github/workflows
+export DEP_ROOT=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/dep_root
+export BASE=${TMPDIR}/Builder/repos/futurerestore-ActionsOnly/
 
 cd ${BASE}
 ln -sf ${DEP_ROOT}/Linux_x86_64_Release/{lib/,include/}  ${DEP_ROOT}/
