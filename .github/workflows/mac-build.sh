@@ -6,7 +6,7 @@ export DEP_ROOT=/Users/runner/work/futurerestore-ActionsOnly/futurerestore-Actio
 export BASE=/Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/
 export CMakeListsTxt=/Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/CMakeLists.txt
 
-cd ${WORKFLOW_ROOT}
+
 ln -sf ${DEP_ROOT}/macOS_x86_64_Release/{lib/,include/} ${DEP_ROOT}/
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=$(which make) -DCMAKE_C_COMPILER=$(which clang) -DCMAKE_CXX_COMPILER=$(which clang++) -DCMAKE_MESSAGE_LOG_LEVEL="WARNING" -G "CodeBlocks - Unix Makefiles" -S ./ -B cmake-build-release-x86_64 -DARCH=x86_64 -DNO_PKGCFG=ON
 make -j4 -l4 -C cmake-build-release-x86_64
@@ -34,3 +34,5 @@ make -j4 -l4 -C cmake-build-asan-arm64
 
 llvm-strip -s cmake-build-release-x86_64/src/futurerestore
 llvm-strip -s cmake-build-release-arm64/src/futurerestore
+
+cd ${WORKFLOW_ROOT}
