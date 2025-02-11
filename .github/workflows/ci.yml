@@ -34,38 +34,38 @@ jobs:
     - name: macOS Build
       id: macOS-Build
       run: |
-        ${{ github.workspace }}/.github/workflows/mac-bootstrap.sh
-        ${{ github.workspace }}/.github/workflows/mac-build.sh
-        ${{ github.workspace }}/.github/workflows/mac-post.sh
+        /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/.github/workflows/mac-bootstrap.sh
+        /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/.github/workflows/mac-build.sh
+        /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/.github/workflows/mac-post.sh
     - name: Versioning
       id: Versioning
       uses: actions/upload-artifact@v4
       with:
         name: Versioning
         path: |
-          ${{ github.workspace }}/latest_build_sha.txt
-          ${{ github.workspace }}/latest_build_num.txt
+          /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/latest_build_sha.txt
+          /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/latest_build_num.txt
     - name: macOS RELEASE Archive
       id: macOS-RELEASE-Archive
       uses: actions/upload-artifact@v4
       with:
         name: futurerestore-macOS-RELEASE
         path: |
-          ${{ github.workspace }}/futurerestore-macOS-*-RELEASE.tar.xz
+          /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/futurerestore-macOS-*-RELEASE.tar.xz
     - name: macOS DEBUG Archive
       id: macOS-DEBUG-Archive
       uses: actions/upload-artifact@v4
       with:
         name: futurerestore-macOS-DEBUG
         path: |
-          ${{ github.workspace }}/futurerestore-macOS-*-DEBUG.tar.xz
+          /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/futurerestore-macOS-*-DEBUG.tar.xz
     - name: macOS ASAN Archive
       id: macOS-ASAN-Archive
       uses: actions/upload-artifact@v4
       with:
         name: futurerestore-macOS-ASAN
         path: |
-          ${{ github.workspace }}/futurerestore-macOS-*-ASAN.tar.xz
+          /Users/runner/work/futurerestore-ActionsOnly/futurerestore-ActionsOnly/futurerestore-macOS-*-ASAN.tar.xz
   Linux:
     runs-on: ubuntu-latest
     steps:
